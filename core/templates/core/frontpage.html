@@ -3,7 +3,62 @@
 {% block title %}Welcome | {% endblock %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+    setInterval(function() {
+        location.reload();  // Refresh the entire page every 60 seconds
+    }, 60000);  // 60000ms = 1 minute
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        /* Add styles for the Nifty data section */
+        .nifty-section {
+            background-color: #f0f8ff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .nifty-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nifty-value {
+            font-size: 2em;
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
 <div class="p-10 lg:p-20 text-center">
     <h1 class="text-3xl lg:text-6xl text-white">Djangochat</h1>
 </div>
+ <!-- Nifty Data Section -->
+        <div class="nifty-section">
+            <div class="nifty-title">Live Nifty Index</div>
+            <div class="nifty-value">{{ nifty_value }}</div>
+        </div>
+        
+        <!-- More content of your homepage -->
+    </div>
+</body>
+</html>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCFSBY8X33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BCFSBY8X33');
+</script>
 {% endblock %}
